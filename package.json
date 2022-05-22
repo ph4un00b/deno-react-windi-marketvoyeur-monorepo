@@ -1,6 +1,5 @@
 {
   "name": "hackathon2",
-  "version": "1.0.0",
   "private": "true",
   "workspaces": [
     "e2e",
@@ -8,9 +7,10 @@
     "spa",
     "ui"
   ],
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "license": "ISC"
+    "spa": "npm run d --workspace=spa",
+    "e2e": "npm run e --workspace=e2e",
+    "e2e:head": "npm run headed --workspace=e2e",
+    "e2e:debug": "npm run debug --workspace=e2e"
+  }
 }
