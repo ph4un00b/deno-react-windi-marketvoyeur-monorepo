@@ -1,0 +1,16 @@
+{
+  "name": "hackathon2",
+  "version": "1.0.0",
+  "private": "true",
+  "workspaces": [
+    "e2e",
+    "server",
+    "spa",
+    "ui"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}

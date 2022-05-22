@@ -1,0 +1,3 @@
+- pal hackathon del midurey https://www.twitch.tv/midudev
+- $ deno task build
+- $ deno task dev
