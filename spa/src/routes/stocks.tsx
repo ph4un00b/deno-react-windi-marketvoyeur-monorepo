@@ -7,7 +7,6 @@ export default function StocksPage() {
   const stocks = getStocks();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // todo:  refactor subfolder
   return (
     <div style={{ display: "flex" }}>
       <nav
