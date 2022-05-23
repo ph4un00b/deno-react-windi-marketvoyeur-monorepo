@@ -4,7 +4,9 @@ import { HashRouter, Route, Routes } from "https://esm.sh/react-router-dom@6";
 import RootPage from "./components/App.tsx";
 import CryptosPage from "./routes/cryptos.tsx";
 import StocksPage from "./routes/stocks.tsx";
-import StockPage from "./routes/stock.tsx";
+import { StocksIndex } from "./routes/stocks.index.tsx";
+import { StockId } from "./routes/stocks.stockId.tsx";
+// import { StocksIndex } from "./routes/stocks.index.tsx";
 
 /* document was configured with proper deno.json */
 /* https://deno.land/manual/typescript/configuration#using-the-lib-property */
@@ -28,17 +30,8 @@ ReactDOM.createRoot(root!).render(
           <Route path="cryptos" element={<CryptosPage />} />
 
           <Route path="stocks" element={<StocksPage />}>
-            // todo: routes/stocks.index.tsx
-            <Route
-              index
-              element={
-                <main style={{ padding: "1rem", color: "orangered" }}>
-                  <p>Select stonk!</p>
-                </main>
-              }
-            />
-
-            <Route path=":stockId" element={<StockPage />} />
+            {StocksIndex}
+            {StockId}
           </Route>
 
           // todo: routes/stocks.404.tsx
