@@ -2,7 +2,6 @@ import React from "https://esm.sh/react@18";
 import { Route } from "https://esm.sh/react-router-dom@6";
 
 export const $404Route = (
-  // todo: routes/stocks.404.tsx
   <Route
     path="*"
     element={

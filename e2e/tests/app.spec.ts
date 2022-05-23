@@ -11,6 +11,19 @@ test("root page", async ({ page }) => {
   await expectVisible(find, "Main!");
 });
 
+test("404 page", async ({ page }) => {
+  const find = page.locator.bind(page);
+  await page.goto(`${BASE_URL}/non_existent_uri`);
+
+  await expectVisible(find, "Stonks Climate!");
+  await expectLinkVisible(find, "Cryptos");
+  await expectLinkVisible(find, "Stonks");
+  await expectVisible(find, "404: There's nothing here!");
+  await expectLinkVisible(find, "2021");
+  await expectLinkVisible(find, "2022");
+  expect(await find("select").inputValue()).toEqual("linear");
+});
+
 test("cryptos page", async ({ page }) => {
   const find = page.locator.bind(page);
   await page.goto(`${BASE_URL}/cryptos`);
