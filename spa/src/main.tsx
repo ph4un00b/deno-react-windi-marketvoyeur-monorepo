@@ -6,27 +6,20 @@ import CryptosPage from "./routes/cryptos.tsx";
 import StocksPage from "./routes/stocks.tsx";
 import { StocksIndex } from "./routes/stocks.index.tsx";
 import { StockId } from "./routes/stocks.stockId.tsx";
-// import { StocksIndex } from "./routes/stocks.index.tsx";
+import { Root } from "./routes/_root.tsx";
 
 /* document was configured with proper deno.json */
 /* https://deno.land/manual/typescript/configuration#using-the-lib-property */
 
 const root = document.getElementById("root");
 
+
 ReactDOM.createRoot(root!).render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
         <Route path="/" element={<RootPage />}>
-          <Route
-            index
-            element={
-              <main style={{ padding: "1rem", color: "orangered" }}>
-                <p>Main!</p>
-              </main>
-            }
-          />
-
+          {Root}
           <Route path="cryptos" element={<CryptosPage />} />
 
           <Route path="stocks" element={<StocksPage />}>
