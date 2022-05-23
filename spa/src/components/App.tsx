@@ -1,5 +1,5 @@
 import React from "https://esm.sh/react@18";
-import { Link, Outlet, useLocation } from "https://esm.sh/react-router-dom@6";
+import { Link, Outlet, useLocation } from "https://esm.sh/react-router-dom@next";
 
 function RootPage() {
   const location = useLocation();

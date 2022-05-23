@@ -1,6 +1,6 @@
 import React from "https://esm.sh/react@18";
 import ReactDOM from "https://esm.sh/react-dom@18/client";
-import { HashRouter } from "https://esm.sh/react-router-dom@6";
+import { DataHashRouter } from "https://esm.sh/react-router-dom@next";
 import { AppRoutes } from "./routes/_routes.tsx";
 
 /* document was configured with a proper deno.json */
@@ -10,8 +10,8 @@ const root = document.getElementById("root");
 
 ReactDOM.createRoot(root!).render(
   <React.StrictMode>
-    <HashRouter>
+    <DataHashRouter fallbackElement={<></>}>
       {AppRoutes}
-    </HashRouter>
+    </DataHashRouter>
   </React.StrictMode>,
 );

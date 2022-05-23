@@ -3,7 +3,7 @@ import {
   useLocation,
   useNavigate,
   useParams,
-} from "https://esm.sh/react-router-dom@6";
+} from "https://esm.sh/react-router-dom@next";
 import { deleteStock, getStock } from "../data.ts";
 
 export default function StockPage() {

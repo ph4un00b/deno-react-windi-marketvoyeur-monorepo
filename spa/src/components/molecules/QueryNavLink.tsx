@@ -6,7 +6,7 @@ import {
   NavLinkProps,
   useLocation,
   useSearchParams,
-} from "https://esm.sh/react-router-dom@6";
+} from "https://esm.sh/react-router-dom@next";
 
 export function QueryNavLink({ to, ...props }: NavLinkProps) {
   const location = useLocation();
