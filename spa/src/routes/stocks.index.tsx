@@ -1,5 +1,4 @@
-import React from "https://esm.sh/react@18";
-import { Route } from "https://esm.sh/react-router-dom@next";
+import { React, Route } from "../deps.ts";
 
 export const StocksIndex = (
   <Route

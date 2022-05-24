@@ -1,7 +1,6 @@
-import React from "https://esm.sh/react@18";
-import { Outlet, useSearchParams } from "https://esm.sh/react-router-dom@next";
 import { getStocks } from "../data.ts";
 import { QueryNavLink } from "../components/molecules/QueryNavLink.tsx";
+import { Outlet, React, useSearchParams } from "../deps.ts";
 
 export default function StocksPage() {
   const stocks = getStocks();

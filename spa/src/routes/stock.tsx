@@ -1,9 +1,4 @@
-import React from "https://esm.sh/react@18";
-import {
-  useLocation,
-  useNavigate,
-  useParams,
-} from "https://esm.sh/react-router-dom@next";
+import { React, useLocation, useNavigate, useParams } from "../deps.ts";
 import { deleteStock, getStock } from "../data.ts";
 
 export default function StockPage() {

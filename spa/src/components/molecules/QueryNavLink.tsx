@@ -1,12 +1,12 @@
-import React from "https://esm.sh/react@18";
 import {
   Link,
   LinkProps,
   NavLink,
   NavLinkProps,
+  React,
   useLocation,
   useSearchParams,
-} from "https://esm.sh/react-router-dom@next";
+} from "../../deps.ts";
 
 export function QueryNavLink({ to, ...props }: NavLinkProps) {
   const location = useLocation();
