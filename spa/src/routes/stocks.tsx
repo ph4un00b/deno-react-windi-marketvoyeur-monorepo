@@ -1,19 +1,14 @@
 import { getStocks } from "../data.ts";
 import { QueryNavLink } from "../components/molecules/QueryNavLink.tsx";
-import { Outlet, React, useSearchParams } from "../deps.ts";
+import { Outlet, React, tw, useSearchParams } from "../client_deps.ts";
 
 export default function StocksPage() {
   const stocks = getStocks();
   const [searchParams, setSearchParams] = useSearchParams();
 
   return (
-    <div style={{ display: "flex" }}>
-      <nav
-        style={{
-          borderRight: "solid 1px",
-          padding: "1rem",
-        }}
-      >
+    <div className={tw`flex`}>
+      <nav className={tw`border-r p-[1rem]`}>
         <input
           value={searchParams.get("filter") || ""}
           onChange={(event) => {
@@ -36,18 +31,7 @@ export default function StocksPage() {
             return name.startsWith(filter.toLowerCase());
           })
           .map((stock) => (
-            <QueryNavLink
-              style={({ isActive }) => {
-                return {
-                  display: "block",
-                  margin: "1rem 0",
-                  backgroundColor: isActive ? "yellowgreen" : "",
-                  color: isActive ? "brown" : "",
-                };
-              }}
-              to={`/stocks/${stock.number}`}
-              key={stock.number}
-            >
+            <QueryNavLink to={`/stocks/${stock.number}`} key={stock.number}>
               {stock.name}
             </QueryNavLink>
           ))}

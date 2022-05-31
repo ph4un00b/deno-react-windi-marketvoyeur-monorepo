@@ -1,4 +1,4 @@
-import { DataHashRouter, React, ReactDOM } from "./deps.ts";
+import { DataHashRouter, React, ReactDOM } from "./client_deps.ts";
 import { AppRoutes } from "./routes/_routes.tsx";
 
 /* document was configured with a proper deno.json */

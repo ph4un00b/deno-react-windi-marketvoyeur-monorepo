@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "e": "playwright test",
+    "e": "playwright test --retries=2",
     "headed": "playwright test --headed",
     "debug": "playwright test --debug"
   },

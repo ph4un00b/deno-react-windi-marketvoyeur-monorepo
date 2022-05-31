@@ -1,13 +1,9 @@
 {
     "scripts": {
         "serve": "deno task dev",
-        "css:clean": "rm windi.css",
-        "css:create": "npm run css:clean && windicss --config windi.config.js --output windi.css",
-        "css:watch": "npm run css:clean && windicss --config windi.config.js --dev --output windi.css",
-        "d": "concurrently \"npm run serve\" \"npm run css:watch\""
+        "d": "concurrently \"npm run serve\""
     },
     "devDependencies": {
-        "concurrently": "^7.2.1",
-        "windicss": "^3.5.4"
+        "concurrently": "^7.2.1"
     }
 }

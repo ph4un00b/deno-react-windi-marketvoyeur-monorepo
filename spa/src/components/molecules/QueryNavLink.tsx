@@ -4,13 +4,25 @@ import {
   NavLink,
   NavLinkProps,
   React,
+  tw,
   useLocation,
   useSearchParams,
-} from "../../deps.ts";
+} from "../../client_deps.ts";
 
 export function QueryNavLink({ to, ...props }: NavLinkProps) {
   const location = useLocation();
-  return <NavLink to={to + location.search} {...props} />;
+  return (
+    <NavLink
+      className={({ isActive }) => {
+        return tw`
+          block my-[1rem] 
+          ${isActive ? "bg-green-200" : ""} 
+          text-pink-700`;
+      }}
+      to={to + location.search}
+      {...props}
+    />
+  );
 }
 
 type ActiveProps = LinkProps & {

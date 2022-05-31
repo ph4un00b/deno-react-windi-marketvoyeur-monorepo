@@ -1,4 +1,5 @@
-import { React, useLocation, useNavigate, useParams } from "../deps.ts";
+import { React, tw, useLocation, useNavigate, useParams } from "../client_deps.ts";
+import CustomBtn from "../components/atoms/CustomBtn.tsx";
 import { deleteStock, getStock } from "../data.ts";
 
 export default function StockPage() {
@@ -10,7 +11,7 @@ export default function StockPage() {
   if (!stock) return <p>No stock!</p>;
 
   return (
-    <main style={{ padding: "1rem" }}>
+    <main className={tw`p-[1rem]`}>
       <h2>Total Due: {stock.amount}</h2>
 
       <p>
@@ -20,14 +21,14 @@ export default function StockPage() {
       <p>Due Date: {stock.due}</p>
 
       <p>
-        <button
+        <CustomBtn
           onClick={() => {
             deleteStock(stock.number);
             navigate("/stock" + location.search);
           }}
         >
           Delete
-        </button>
+        </CustomBtn>
       </p>
     </main>
   );

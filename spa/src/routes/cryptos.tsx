@@ -1,8 +1,8 @@
-import { React } from "../deps.ts";
+import { React, tw } from "../client_deps.ts";
 
 export default function CryptosPage() {
   return (
-    <main style={{ padding: "1rem 0" }}>
+    <main className={tw`py-[1rem]`}>
       <h2>meme coins!</h2>
     </main>
   );
