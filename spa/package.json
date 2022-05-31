@@ -1,9 +1,6 @@
 {
     "scripts": {
-        "serve": "deno task dev",
-        "d": "concurrently \"npm run serve\""
-    },
-    "devDependencies": {
-        "concurrently": "^7.2.1"
+        "build": "deno task build",
+        "serve": "deno task dev"
     }
 }
