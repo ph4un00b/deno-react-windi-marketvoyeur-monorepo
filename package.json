@@ -12,6 +12,7 @@
     "build": "npm run build -w=spa",
     "test": "npm run e --workspace=e2e",
     "e2e:head": "npm run headed --workspace=e2e",
-    "e2e:debug": "npm run debug --workspace=e2e"
+    "e2e:debug": "npm run debug --workspace=e2e",
+    "gitflat": "NO_COLOR=true deno run -q --allow-read --allow-write --allow-run --allow-net --allow-env --unstable ./server/coins.postprocess.ts ./server/coins.raw.json"
   }
 }

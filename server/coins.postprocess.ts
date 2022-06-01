@@ -38,7 +38,7 @@ const filteredCurrencyRates = currencyRates.map((
   rank,
 }));
 
-const newFilename = "./generated/coins.postprocessed.json"; // name of a new file to be saved
+const newFilename = "./server/generated/coins.postprocessed.json"; // name of a new file to be saved
 await writeJSON(newFilename, filteredCurrencyRates); // create a new JSON file with just the Bitcoin price
 // console.log("Wrote a post process file")
 
