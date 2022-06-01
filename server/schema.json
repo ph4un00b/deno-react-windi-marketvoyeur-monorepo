@@ -1,0 +1,164 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Schema",
+    "definitions": {
+        "Schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "status": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/Data"
+                }
+            },
+            "required": [
+                "data",
+                "status"
+            ],
+            "title": "Schema"
+        },
+        "Data": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "stats": {
+                    "$ref": "#/definitions/Stats"
+                },
+                "coins": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Coin"
+                    }
+                }
+            },
+            "required": [
+                "coins",
+                "stats"
+            ],
+            "title": "Data"
+        },
+        "Coin": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "uuid": {
+                    "type": "string"
+                },
+                "symbol": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "iconUrl": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ],
+                    "qt-uri-extensions": [
+                        ".svg"
+                    ]
+                },
+                "marketCap": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "string"
+                },
+                "listedAt": {
+                    "type": "integer"
+                },
+                "tier": {
+                    "type": "integer"
+                },
+                "change": {
+                    "type": "string"
+                },
+                "rank": {
+                    "type": "integer"
+                },
+                "sparkline": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "lowVolume": {
+                    "type": "boolean"
+                },
+                "coinrankingUrl": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "24hVolume": {
+                    "type": "string"
+                },
+                "btcPrice": {
+                    "type": "string",
+                    "format": "integer"
+                }
+            },
+            "required": [
+                "24hVolume",
+                "btcPrice",
+                "change",
+                "coinrankingUrl",
+                "color",
+                "iconUrl",
+                "listedAt",
+                "lowVolume",
+                "marketCap",
+                "name",
+                "price",
+                "rank",
+                "sparkline",
+                "symbol",
+                "tier",
+                "uuid"
+            ],
+            "title": "Coin"
+        },
+        "Stats": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "total": {
+                    "type": "integer"
+                },
+                "totalCoins": {
+                    "type": "integer"
+                },
+                "totalMarkets": {
+                    "type": "integer"
+                },
+                "totalExchanges": {
+                    "type": "integer"
+                },
+                "totalMarketCap": {
+                    "type": "string"
+                },
+                "total24hVolume": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "total",
+                "total24hVolume",
+                "totalCoins",
+                "totalExchanges",
+                "totalMarketCap",
+                "totalMarkets"
+            ],
+            "title": "Stats"
+        }
+    }
+}
