@@ -2,8 +2,8 @@
 import { readJSON, writeJSON } from "https://deno.land/x/flat@0.0.15/mod.ts";
 import { Coin } from "./generated/models.ts";
 
-// const filename = Deno.args[0] // Same name as downloaded_filename `const filename = 'btc-price.json';`
-const filename = "coins.raw.json"; // Same name as downloaded_filename `const filename = 'btc-price.json';`
+const filename = Deno.args[0]; // Same name as downloaded_filename `const filename = 'btc-price.json';`
+// const filename = "coins.raw.json"; // Same name as downloaded_filename `const filename = 'btc-price.json';`
 const json = await readJSON(filename) as Coin;
 // console.log(json)
 
