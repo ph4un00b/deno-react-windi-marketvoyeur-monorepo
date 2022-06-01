@@ -1,8 +1,9 @@
 import { json } from "@remix-run/deno";
-import coins_json from "../../coins.json" assert { type: "json" };
-import { Coin } from "../models.ts";
+import { Coin, CoinElement } from "../../generated/models.ts";
+import json_coins from "../../generated/coins.postprocessed.json" assert {
+  type: "json",
+};
 
 export function loader({ request }: { request: Request }) {
-  const api = coins_json as Coin;
-  return json(api.data.coins[0]);
+  return json(json_coins);
 }
