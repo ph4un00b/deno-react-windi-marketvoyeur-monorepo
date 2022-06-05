@@ -1,5 +1,10 @@
 {
     "deno.enable": true,
     "deno.lint": true,
-    "deno.unstable": true
+    "deno.unstable": true,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0C3332",
+        "titleBar.activeBackground": "#114846",
+        "titleBar.activeForeground": "#F2FCFC"
+    }
 }
